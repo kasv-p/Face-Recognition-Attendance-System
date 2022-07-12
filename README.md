@@ -49,6 +49,6 @@ http://localhost/Attendance-System-Using-Face-Recognition/trail.php
 http://localhost/Attendance-System-Using-Face-Recognition/home-page.php
 ```
 
-5. To access the teacher's page use the following **username - vaishu123** and **password - 456**
+5. To access the teacher's page use the following **username - vyshu123** and **password - 123**
 
-6. To access the student's page use the following **username - vaishu123** and **password - vaishnavi1**
+6. To access the student's page use the following **username - vyshu123** and **password - vyshnavi1**
