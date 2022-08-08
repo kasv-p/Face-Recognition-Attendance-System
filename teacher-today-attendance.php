@@ -11,32 +11,6 @@
     <link rel="stylesheet" href="teacher-today-attendance.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="logo.jpg" type="image/x-icon" />
-    <script>
-  $(document).ready( function () {
-  $('#checkin').DataTable();
-  $('#checkout').DataTable();
-
-  $('#select').on('change', function ()
-  {
-    var selectValue = $(this).val();
-    $.ajax({
-      type: "POST",
-      url: "teacher-today-attendance.php",
-      data: {
-        selected: selectValue
-      },
-      success: function (data) {
-        console.log(data);
-        $('#pages').html(data);
-      },
-      error: function (data) {
-        console.log(data);
-      }
-    });
-
-  });
-  });
-  </script>
 
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
@@ -218,5 +192,31 @@
 
   <script src="teacher.js"></script>
   <script src="teacher-today-attendance.js"></script>
+  <script>
+$(document).ready( function () {
+$('#checkin').DataTable();
+$('#checkout').DataTable();
+
+$('#select').on('change', function ()
+{
+  var selectValue = $(this).val();
+  $.ajax({
+    type: "POST",
+    url: "teacher-today-attendance.php",
+    data: {
+      selected: selectValue
+    },
+    success: function (data) {
+      console.log(data);
+      $('#pages').html(data);
+    },
+    error: function (data) {
+      console.log(data);
+    }
+  });
+
+});
+});
+</script>
 </body>
 </html>
